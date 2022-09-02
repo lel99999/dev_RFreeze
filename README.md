@@ -1,6 +1,21 @@
 # dev_RFreeze
 R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements 
 
+##### List all installed packages
+```
+pkg = tibble::tibble(
+  Package = names(installed.packages()[,3]),
+  Version = unname(installed.packages()[,3])
+)
+
+write(pkg, "", sep = ", ")
+```
+
+##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
+```
+>sessionInfo()
+```
+
 ##### Tooling
 - Use SQLite3 DB and Tools to capture and store info
   - Tools (command line interface) <br/>
