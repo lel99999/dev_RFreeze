@@ -22,3 +22,6 @@ unlink(fil) # tidy up
 # Writing to the "console" 'tab-delimited'
 # two rows, five cols but the first row is 1 2 3 4 5
 write(x, "", sep = "\t")
+
+
+### Use >sessionInfo() is used to display attached and loaded packages, which may/is a subset of all the installed packages.
