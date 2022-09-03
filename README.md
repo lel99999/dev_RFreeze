@@ -13,9 +13,17 @@ R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements
 
 ```
 >write(pkg, "", sep = ", ")
-## Error
+## Error b/c pkg is a list
 ```
 ![https://github.com/lel99999/dev_RFreeze/blob/main/R_write_error-01.png](https://github.com/lel99999/dev_RFreeze/blob/main/R_write_error-01.png) <br/>
+
+```
+>sink("/tmp/test2.txt")
+>print(pkg)
+>sink()
+>system("cat /tmp/test2.txt")
+```
+![https://github.com/lel99999/dev_RFreeze/blob/main/Rsytem_cat-02.png](https://github.com/lel99999/dev_RFreeze/blob/main/Rsytem_cat-02.png) <br/>
 
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
 ```
