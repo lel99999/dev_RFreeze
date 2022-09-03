@@ -10,8 +10,12 @@ R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements
   Version = unname(installed.packages()[,3])
  )
 
->write(pkg, "", sep = ", ")
+
 ```
+>write(pkg, "", sep = ", ")
+## Error
+```
+![https://github.com/lel99999/dev_RFreeze/blob/main/R_cat_error-01.png](https://github.com/lel99999/dev_RFreeze/blob/main/R_cat_error-01.png) <br/>
 
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
 ```
