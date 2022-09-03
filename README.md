@@ -3,7 +3,7 @@ R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements
 
 ##### List all installed packages
 ```
->install.packages("tiblle")
+>install.packages("tibble")
 
 >pkg = tibble::tibble(
   Package = names(installed.packages()[,3]),
