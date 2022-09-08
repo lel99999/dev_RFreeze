@@ -30,6 +30,13 @@ R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements
 ```
 ![https://github.com/lel99999/dev_RFreeze/blob/main/R_print_all-01.png](https://github.com/lel99999/dev_RFreeze/blob/main/R_print_all-01.png) <br/>
 
+##### Loop over a list
+```
+for (p in p_list){
+  print(p)
+}
+```
+
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
 ```
 >sessionInfo()
