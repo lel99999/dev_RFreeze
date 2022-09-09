@@ -60,6 +60,10 @@ for(count in 1:length(inst_pkgs)){
 >sessionInfo()
 ```
 
+##### Project and Package Isolation with Packrat
+- [https://rstudio.github.io/packrat/](https://rstudio.github.io/packrat/) <br/>
+- [https://rstudio.github.io/packrat/walkthrough.html](https://rstudio.github.io/packrat/walkthrough.html) <br/>
+
 ##### Tooling
 - Use SQLite3 DB and Tools to capture and store info
   - Tools (command line interface) <br/>
