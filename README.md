@@ -30,11 +30,12 @@ R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements
 ```
 ![https://github.com/lel99999/dev_RFreeze/blob/main/R_print_all-01.png](https://github.com/lel99999/dev_RFreeze/blob/main/R_print_all-01.png) <br/>
 
-##### Loop over a list
+##### Using datafrmae
 ```
-for (p in p_list){
-  print(p)
-}
+inst_pkgs <- as.data.frame(installed.packages()[ , c(1, 3:4)]) 
+inst_pkgs <- inst_pkgs[is.na(inst_pkgs$Priority), 1:2, drop = FALSE] 
+rownames(inst_pkgs) <- NULL 
+print(inst_pkgs)
 ```
 
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
