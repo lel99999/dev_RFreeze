@@ -64,6 +64,9 @@ for(count in 1:length(inst_pkgs)){
 - [https://rstudio.github.io/packrat/](https://rstudio.github.io/packrat/) <br/>
 - [https://rstudio.github.io/packrat/walkthrough.html](https://rstudio.github.io/packrat/walkthrough.html) <br/>
 
+#### Scripting and Command-line frontend for R (littler)
+- [http://dirk.eddelbuettel.com/code/littler.html](http://dirk.eddelbuettel.com/code/littler.html) <br/>
+
 ##### Tooling
 - Use SQLite3 DB and Tools to capture and store info
   - Tools (command line interface) <br/>
