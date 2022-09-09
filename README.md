@@ -50,7 +50,7 @@ restore_pkgs_v4.R
 ```
 load("~/inst_pkgs.v3")
 for(count in 1:length(inst_pkgs)){
-  install.packages(inst_pkgs[count]])
+  install.packages(inst_pkgs[count])
 }
 ```
 
