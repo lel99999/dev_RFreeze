@@ -53,7 +53,11 @@ for(count in 1:length(inst_pkgs)){
   install.packages(inst_pkgs[count])
 }
 ```
-
+#### Rv3 to Rv4 using pure command-line commands
+```
+$R -e 'ip=installed.packages();inst_pkgs=as.vector(ip[is.na(ip[,"Priority"]), 1]);save(inst_pkgs, file="~/inst_pkgs.v3")'
+$R -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){ install.packages(inst_pks[count])}'
+```
 
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
 ```
