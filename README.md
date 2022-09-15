@@ -57,6 +57,9 @@ for(count in 1:length(inst_pkgs)){
 ```
 $R -e 'ip=installed.packages();inst_pkgs=as.vector(ip[is.na(ip[,"Priority"]), 1]);save(inst_pkgs, file="~/inst_pkgs.v3")'
 $R -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){ install.packages(inst_pks[count])}'
+
+### Conditional 
+$R -e 'if (! ('{{ item.name }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item.name }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }'
 ```
 
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
