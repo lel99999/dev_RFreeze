@@ -1,5 +1,14 @@
 # dev_RFreeze
-R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements 
+R Freeze Mechanism to Replicate Pip List/Freeze to Capture Package Requirements <br/>
+##### Typically in Python, to collect installed libraries one would do the following: <br/>
+```
+$pip freeze > ~/requirements.txt
+```
+
+Then to restore those libraries to a new environment: <br/>
+```
+$pip install -r ~/requirements.txt
+```
 
 ##### List all installed packages
 ```
