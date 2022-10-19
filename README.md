@@ -73,6 +73,14 @@ $Rv4 -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs){if (! (inst_pkg
 $Rv4 -e 'if (! ('{{ item.name }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item.name }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }'
 ```
 
+##### Verify Installed Packages Built with v4
+```
+>ipkgs <- as.data.frame(installed.packages(), stringsAsFactors = FALSE, row.names = FALSE)
+>ipkgs[, c("Package", "Version", "Built")]
+```
+![https://github.com/lel99999/dev_RFreeze/blob/main/R_installed_version_with_built-01.PNG](https://github.com/lel99999/dev_RFreeze/blob/main/R_installed_version_with_built-01.PNG) <br/>
+
+
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
 ```
 >sessionInfo()
