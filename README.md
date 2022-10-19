@@ -68,8 +68,7 @@ $R -e 'ip=installed.packages();inst_pkgs=as.vector(ip[is.na(ip[,"Priority"]), 1]
 $Rv4 -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){ install.packages(inst_pkgs[count])}'
 
 ### Conditional 
-$Rv4 -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){if (! (inst_pkgs[count] %in% installed.packages()[,'Package'])) { install.packages(pkgs=inst_pkgs[count] }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }
-
+$Rv4 -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs){if (! (inst_pkgs[count] %in% installed.packages()[,'Package'])) { install.packages(pkgs=inst_pkgs[count] , repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }'
 
 $Rv4 -e 'if (! ('{{ item.name }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item.name }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }'
 ```
