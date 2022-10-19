@@ -65,13 +65,13 @@ for(count in 1:length(inst_pkgs)){
 #### Rv3 to Rv4 using pure command-line commands
 ```
 $R -e 'ip=installed.packages();inst_pkgs=as.vector(ip[is.na(ip[,"Priority"]), 1]);save(inst_pkgs, file="~/inst_pkgs.v3")'
-$R -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){ install.packages(inst_pkgs[count])}'
+$Rv4 -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){ install.packages(inst_pkgs[count])}'
 
 ### Conditional 
-$R -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){if (! (inst_pkgs[count] %in% installed.packages()[,'Package'])) { install.packages(pkgs=inst_pkgs[count] }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }
+$Rv4 -e 'load("~/inst_pkgs.v3");for(count in 1:length(inst_pkgs)){if (! (inst_pkgs[count] %in% installed.packages()[,'Package'])) { install.packages(pkgs=inst_pkgs[count] }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }
 
 
-$R -e 'if (! ('{{ item.name }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item.name }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }'
+$Rv4 -e 'if (! ('{{ item.name }}' %in% installed.packages()[,'Package'])) { install.packages(pkgs='{{ item.name }}', repos=c('http://cran.rstudio.com/')); print('Added'); } else { print('Already installed'); }'
 ```
 
 ##### List all attached and loaded packages (for dependencies), which is a subset of all installed packages
